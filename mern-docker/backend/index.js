@@ -11,13 +11,9 @@ const connect = require("./database/connect");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
 app.use(express.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   console.log("Hello World!".rainbow);
